@@ -1,0 +1,11 @@
+torch
+torchvision
+accelerate
+einops
+numpy
+pillow
+diffusers
+safetensors
+tokenizers
+transformers==4.57.1
+huggingface_hub
