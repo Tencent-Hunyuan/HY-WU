@@ -1,6 +1,7 @@
 <div align="center">
 <img src="./assets/tencent-hy-wu-logo.svg" alt="HY-WU Logo" width="600">
 
+
 # HY-WU (Part I): An Extensible Functional Neural Memory Framework and An Instantiation in Text-Guided Image Editing
 </div>
 
@@ -23,7 +24,7 @@
 </p> -->
 
 ## 🔥 News
-
+- **March 10, 2026**: **We are hiring Interns and Full-time Employees! 🚀** (Focus: Parameter Generation. Drop your CV via [victorkwang@global.tencent.com](mailto:victorkwang@global.tencent.com))
 - **March 6, 2026**: 🎉 **[HY-WU](https://github.com/Tencent-Hunyuan/HY-WU)** open source - Inference code and model weights publicly available.
 
 ## 🗂️ Contents
