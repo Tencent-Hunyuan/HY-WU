@@ -14,7 +14,7 @@
   <a href=https://huggingface.co/tencent/HY-WU target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-d96902.svg height=22px></a>
   <a href=https://github.com/Tencent-Hunyuan/HY-WU target="_blank"><img src=https://img.shields.io/badge/GitHub-181717.svg?logo=github height=22px></a>
   <a href=https://arxiv.org/abs/2603.07236 target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>
-  <a href=https://x.com/TencentHunyuan target="_blank"><img src=https://img.shields.io/badge/Hunyuan-black.svg?logo=x height=22px></a>
+  <a href=https://x.com/TencentHunyuan/status/2029644529578692723?s=20 target="_blank"><img src=https://img.shields.io/badge/Hunyuan-black.svg?logo=x height=22px></a>
   <a href=https://docs.qq.com/doc/DUVVadmhCdG9qRXBU target="_blank"><img src=https://img.shields.io/badge/📚-PromptHandBook-grey.svg?logo=book height=22px></a>
 </div>
 
