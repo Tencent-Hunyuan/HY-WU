@@ -13,7 +13,7 @@
   <a href=https://tencent-hy-wu.github.io/ target="_blank"><img src=https://img.shields.io/badge/🌐%20Demo-4285F4.svg height=22px></a>
   <a href=https://huggingface.co/tencent/HY-WU target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-d96902.svg height=22px></a>
   <a href=https://github.com/Tencent-Hunyuan/HY-WU target="_blank"><img src=https://img.shields.io/badge/GitHub-181717.svg?logo=github height=22px></a>
-  <a href=https://github.com/Tencent-Hunyuan/HY-WU/blob/main/assets/report.pdf target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>
+  <a href=https://arxiv.org/abs/2603.07236 target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>
   <a href=https://x.com/TencentHunyuan target="_blank"><img src=https://img.shields.io/badge/Hunyuan-black.svg?logo=x height=22px></a>
   <a href=https://docs.qq.com/doc/DUVVadmhCdG9qRXBU target="_blank"><img src=https://img.shields.io/badge/📚-PromptHandBook-grey.svg?logo=book height=22px></a>
 </div>
@@ -193,13 +193,10 @@ Given that these commercial systems are likely trained with substantially larger
 If you find HY-WU useful in your research, please cite our work:
 
 ```bibtex
-@misc{wu2026hy-wu,
-  author = {Tencent HY Team, Mengxuan Wu, Xuanlei Zhao, Ziqiao Wang, Ruichfeng Feng, Atlas Wang, Qinglin Lu, and Kai Wang},
-  title = {HY-WU (Part I): An Extensible Functional Neural Memory Framework and An Instantiation in Text-Guided Image Editing},
-  year = {2026},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/Tencent-Hunyuan/HY-WU}},
-  note = {Preprint}
+@article{wu2026hy-wu,
+  title={HY-WU (Part I): An Extensible Functional Neural Memory Framework and An Instantiation in Text-Guided Image Editing},
+  author={Tencent HY Team, Mengxuan Wu, Xuanlei Zhao, Ziqiao Wang, Ruicheng Feng, Atlas Wang, Qinglin Lu, and Kai Wang},
+  journal={arXiv preprint arXiv:2603.07236},
+  year={2026}
 }
 ```
