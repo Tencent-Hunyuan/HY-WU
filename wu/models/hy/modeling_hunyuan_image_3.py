@@ -3239,7 +3239,8 @@ class HunyuanImage3ForCausalMM(HunyuanImage3PreTrainedModel, GenerationMixin):
                 )
                 ratio_index = outputs[0, -1].item()
                 reso = self.image_processor.vae_reso_group[ratio_index]
-                image_size = reso.height, reso.width
+                if image_size == "auto":
+                    image_size = reso.height, reso.width
 
         # Generate image
         self.use_taylor_cache = use_taylor_cache

@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -18,17 +19,23 @@ pipeline = WUPipeline(
 )
 
 
-def generate(prompt, imgs, diff_infer_steps, seed):
+def generate(prompt, imgs, image_size, diff_infer_steps, seed):
     if not prompt:
         raise gr.Error("请输入 prompt")
     if not imgs or len(imgs) == 0:
         raise gr.Error("请上传至少一张图片")
+
+    image_size_str = str(image_size).strip().lower()
+    if image_size_str != "auto":
+        if not re.match(r"^\d+x\d+$", image_size_str):
+            raise gr.Error("image_size 格式需为 auto 或 WxH（例如 1024x1024）")
 
     imgs_input = [img.name if hasattr(img, "name") else img for img in imgs]
 
     sample = pipeline.generate(
         prompt=prompt,
         imgs_input=imgs_input,
+        image_size=image_size_str,
         diff_infer_steps=int(diff_infer_steps),
         seed=int(seed),
         verbose=2,
@@ -52,6 +59,11 @@ with gr.Blocks(title="HunyuanImage WU", theme=gr.themes.Soft()) as demo:
                 file_count="multiple",
                 file_types=["image"],
             )
+            image_size = gr.Textbox(
+                label="Image Size",
+                value="auto",
+                placeholder="auto 或 1024x1024",
+            )
             with gr.Row():
                 diff_infer_steps = gr.Slider(
                     label="Diffusion Steps",
@@ -72,7 +84,7 @@ with gr.Blocks(title="HunyuanImage WU", theme=gr.themes.Soft()) as demo:
 
     run_btn.click(
         fn=generate,
-        inputs=[prompt, imgs, diff_infer_steps, seed],
+        inputs=[prompt, imgs, image_size, diff_infer_steps, seed],
         outputs=output_image,
     )
 
@@ -81,11 +93,12 @@ with gr.Blocks(title="HunyuanImage WU", theme=gr.themes.Soft()) as demo:
             [
                 "以图1为底图，将图2公仔穿的衣物换到图1人物身上；保持图1人物、姿态和背景不变，自然贴合并融合。",
                 ["./assets/input_1_1.png", "./assets/input_1_2.png"],
+                "auto",
                 50,
                 42,
             ],
         ],
-        inputs=[prompt, imgs, diff_infer_steps, seed],
+        inputs=[prompt, imgs, image_size, diff_infer_steps, seed],
     )
 
 if __name__ == "__main__":
